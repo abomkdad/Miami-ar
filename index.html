@@ -1,195 +1,313 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عرض مارفيل</title>
-  
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID'); 
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عرض مارفيل</title>
+  
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1278802597312896');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1278802597312896&ev=PageView&noscript=1"
+/></noscript>
+<script type="text/javascript">
+  // تثبيت مكتبة Snapchat
+  (function(e,t,n){
+    if(e.snaptr) return;
+    var a = e.snaptr = function(){
+      a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments);
+    };
+    a.queue = [];
+    var s = 'script';
+    var r = t.createElement(s);
+    r.async = true;
+    r.src = n;
+    var u = t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);
+  })(window, document, 'https://sc-static.net/scevent.min.js');
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      direction: rtl;
-    }
-    .banner {
-      width: 100%;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-    .progress-container {
-      background-color: #000;
-      padding: 20px 0;
-      text-align: center;
-    }
-    .progress-wrapper {
-      background-color: #fff;
-      border-radius: 50px;
-      overflow: hidden;
-      margin: 0 auto;
-      width: 80%;
-      max-width: 400px;
-    }
-    .progress-bar {
-      background-color: green;
-      width: 100%;
-      padding: 10px;
-      color: white;
-      font-weight: bold;
-      border-radius: 50px;
-    }
-    .alert {
-      background-color: #fff3cd;
-      color: #856404;
-      padding: 10px;
-      text-align: center;
-    }
-    .form-container {
-      background-color: #1e1e1e;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .form-container h2 {
-      text-align: center;
-      color: #fff;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background-color: #333;
-      color: #fff;
-    }
-    .form-group textarea {
-      resize: none;
-    }
-    .submit-button {
-      background-color: #28a745;
-      border: none;
-      padding: 12px;
-      color: #fff;
-      width: 100%;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    video {
-      width: 100%;
-      max-height: 80vh;
-      display: block;
-      margin: 20px auto;
-    }
-  </style>
+  // تهيئة البيكسل
+  snaptr('init', '33f9ce6c-9a7e-4019-8023-98c3ead1fdf0', {});
+
+  // تسجيل عرض الصفحة
+  snaptr('track', 'PAGE_VIEW');
+
+  // تسجيل بقية الأحداث عند الضغط على الزر
+  function submitSnapEvents() {
+    // ✅ Add to Cart
+    snaptr('track', 'ADD_CART', {
+      price: 100,
+      currency: 'ILS',
+      item_ids: ['marvel_offer'],
+      item_category: 'Perfume',
+      number_items: 1
+    });
+
+    // ✅ Lead
+    snaptr('track', 'LEAD');
+
+    // ✅ Purchase
+    snaptr('track', 'PURCHASE', {
+      transaction_id: 'wa-' + Date.now(),
+      price: 100,
+      currency: 'ILS',
+      item_category: 'Perfume',
+      item_ids: ['marvel_offer'],
+      quantity: 1
+    });
+  }
+</script>
+<script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t;
+    var ttq = w[t] = w[t] || [];
+    ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer = function (t, e) {
+      t[e] = function () {
+        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+      }
+    };
+    for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+    ttq.load = function (e, n) {
+      var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i = ttq._i || {};
+      ttq._i[e] = [];
+      ttq._i[e]._u = r;
+      ttq._t = ttq._t || {};
+      ttq._t[e] = +new Date;
+      ttq._o = ttq._o || {};
+      ttq._o[e] = n || {};
+      n = document.createElement("script");
+      n.type = "text/javascript";
+      n.async = true;
+      n.src = r + "?sdkid=" + e + "&lib=" + t;
+      e = document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(n, e);
+    };
+    ttq.load('D2B1O33C77U89NHRM5J0');
+    ttq.page();
+
+    function trackTikTokEvents() {
+      const price = 100;
+      const currency = 'ILS';
+      ttq.track('AddToCart', { value: price, currency: currency });
+      ttq.track('Lead');
+      ttq.track('CompletePayment', { value: price, currency: currency });
+    }
+    window.trackTikTokEvents = trackTikTokEvents;
+  }(window, document, 'ttq');
+</script>
+</head>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      direction: rtl;
+      /* إضافة مساحة في الأسفل لمنع تداخل المحتوى مع الشريط الثابت */
+      padding-bottom: 70px;
+    }
+    .banner {
+      width: 100%;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .progress-container {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .progress-wrapper {
+      background-color: #fff;
+      border-radius: 50px;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 400px;
+    }
+    .progress-bar {
+      background-color: green;
+      width: 100%;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      border-radius: 50px;
+    }
+    .alert {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 10px;
+      text-align: center;
+    }
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #fff;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+    .form-group textarea {
+      resize: none;
+    }
+    .submit-button {
+      background-color: #28a745;
+      border: none;
+      padding: 12px;
+      color: #fff;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    video {
+      width: 100%;
+      max-height: 80vh;
+      display: block;
+      margin: 20px auto;
+    }
+    /* CSS للزر الثابت الجديد */
+    .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .sticky-footer button {
+      background-color: #28a745;
+      border: none;
+      padding: 15px 30px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-  <img src="Untitled design (6).png" alt="عرض مارفيل" class="banner">
+  <img src="Untitled design (6).png" alt="عرض مارفيل" class="banner">
 
-  <div class="progress-container">
-    <div class="progress-wrapper">
-      <div class="progress-bar">تبقى خطوة لاتمام الطلب</div>
-    </div>
-  </div>
+  <div class="progress-container">
+    <div class="progress-wrapper">
+      <div class="progress-bar">تبقى خطوة لاتمام الطلب</div>
+    </div>
+  </div>
 
-  <div class="alert" id="stockAlert">⏳ تبقّى 5 عملاء فقط يمكنهم الحصول على عرض مارڤيل قبل انتهاء العرض!</div>
+  <div class="alert" id="stockAlert">⏳ تبقّى 5 عملاء فقط يمكنهم الحصول على عرض مارڤيل قبل انتهاء العرض!</div>
 
-  <div class="form-container">
-    <h2 id="formTitle">أرغب بطلب عرض عطور Marvel</h2>
-    <div class="form-group">
-      <input type="text" id="name" placeholder="الاسم الكامل">
-    </div>
-    <div class="form-group">
-      <input type="tel" id="phone" placeholder="رقم الهاتف">
-    </div>
-    <div class="form-group">
-      <input type="text" id="address" placeholder="العنوان">
-    </div>
-    <div class="form-group">
-      <textarea id="note" rows="3" placeholder="ملاحظة (اختياري)"></textarea>
-    </div>
-    <button class="submit-button" onclick="submitForm()" id="submitBtn">تأكيد الطلب</button>
-  </div>
+  <div class="form-container">
+    <h2 id="formTitle">أرغب بطلب عرض عطور Marvel</h2>
+    <div class="form-group">
+      <input type="text" id="name" placeholder="الاسم الكامل">
+    </div>
+    <div class="form-group">
+      <input type="tel" id="phone" placeholder="رقم الهاتف">
+    </div>
+    <div class="form-group">
+      <input type="text" id="address" placeholder="العنوان">
+    </div>
+    <div class="form-group">
+      <textarea id="note" rows="3" placeholder="ملاحظة (اختياري)"></textarea>
+    </div>
+    <button class="submit-button" onclick="submitForm()" id="submitBtn">تأكيد الطلب</button>
+  </div>
 
-  <video autoplay muted playsinline onclick="toggleMute(this)">
-    <source src="https://madperfume.ps/upload/07-2025/page/Copy%20of%2028.mp4" type="video/mp4">
-  </video>
+  <video autoplay muted playsinline onclick="toggleMute(this)">
+    <source src="https://madperfume.ps/upload/07-2025/page/Copy%20of%2028.mp4" type="video/mp4">
+  </video>
 
-  <script>
-    function toggleMute(video) {
-      video.muted = !video.muted;
-    }
+    <div class="sticky-footer">
+    <button onclick="submitForm()" id="stickyBtn">اطلب الآن</button>
+  </div>
 
-    function submitForm() {
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const address = document.getElementById("address").value.trim();
-      const note = document.getElementById("note").value.trim();
-      const product = window.location.pathname.split("/").pop().split(".")[0] || "عرض مارفيل";
+  <script>
+    function toggleMute(video) {
+      video.muted = !video.muted;
+    }
 
-      const lang = navigator.language || navigator.userLanguage;
-      const isHebrew = lang.includes("he");
+    function submitForm() {
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const note = document.getElementById("note").value.trim();
+      const product = window.location.pathname.split("/").pop().split(".")[0] || "عرض مارفيل";
 
-      let message;
-      if (isHebrew) {
-        message = `שלום, אני מעוניין לבצע הזמנה עבור מבצע הבשמים Marvel:
+      const lang = navigator.language || navigator.userLanguage;
+      const isHebrew = lang.includes("he");
+
+      let message;
+      if (isHebrew) {
+        message = `שלום, אני מעוניין לבצע הזמנה עבור מבצע הבשמים Marvel:
 👤 שם: ${name}
 📞 טלפון: ${phone}
 🏠 כתובת: ${address}
 📝 הערה: ${note || 'ללא'}`;
-      } else {
-        message = `مرحباً، أود طلب عرض ${product}:
+      } else {
+        message = `مرحباً، أود طلب عرض ${product}:
 👤 الاسم: ${name}
 📞 الهاتف: ${phone}
 🏠 العنوان: ${address}
 📝 ملاحظة: ${note || 'لا يوجد'}`;
-      }
+      }
 
-      const encodedMessage = encodeURIComponent(message);
-      const url = `https://wa.me/972525105889?text=${encodedMessage}`;
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/972506164130?text=${encodedMessage}`;
 
-      fbq('track', 'Lead'); // Pixel track event
-      window.open(url, '_blank');
-    }
+      fbq('track', 'Lead'); // Pixel track event
+      window.open(url, '_blank');
+    }
 
-    // ترجمة بناءً على اللغة
-    const lang = navigator.language || navigator.userLanguage;
-    if (lang.includes("he")) {
-      document.getElementById("formTitle").innerText = "אני מעוניין להזמין את מבצע הבשמים של Marvel";
-      document.getElementById("name").placeholder = "השם המלא";
-      document.getElementById("phone").placeholder = "מספר טלפון";
-      document.getElementById("address").placeholder = "כתובת";
-      document.getElementById("note").placeholder = "הערה (לא חובה)";
-      document.getElementById("submitBtn").innerText = "אישור ההזמנה";
-      document.getElementById("stockAlert").innerText = "⏳ נותרו רק 5 לקוחות שיכולים להזמין את ההצעה לפני סיומה!";
-      document.querySelector(".progress-bar").innerText = "נשאר שלב אחד להשלמת ההזמנה";
-    }
-  </script>
+    // ترجمة بناءً على اللغة
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.includes("he")) {
+      document.getElementById("formTitle").innerText = "אני מעוניין להזמין את מבצע הבשמים של Marvel";
+      document.getElementById("name").placeholder = "השם המלא";
+      document.getElementById("phone").placeholder = "מספר טלפון";
+      document.getElementById("address").placeholder = "כתובת";
+      document.getElementById("note").placeholder = "הערה (לא חובה)";
+      document.getElementById("submitBtn").innerText = "אישור ההזמנה";
+      document.getElementById("stockAlert").innerText = "⏳ נותרו רק 5 לקוחות שיכולים להזמין את ההצעה לפני סיומה!";
+      document.querySelector(".progress-bar").innerText = "נשאר שלב אחד להשלמת ההזמנה";
+      // ترجمة الزر الجديد
+      document.getElementById("stickyBtn").innerText = "הזמן עכשיו";
+    }
+  </script>
 </body>
 </html>
