@@ -104,7 +104,7 @@
   </style>
 </head>
 <body>
-  <img src="landing page 1 (7).png" alt="عرض مارفيل" class="banner" />
+  <img src="landing page 1 (7).png" alt="عرض ميامي" class="banner" />
 
   <div class="progress-container">
     <div class="progress-wrapper">
@@ -142,7 +142,7 @@
       var phone = document.getElementById('phone').value.trim();
       var address = document.getElementById('address').value.trim();
       var note = document.getElementById('note').value.trim();
-      var product = (window.location.pathname.split('/').pop().split('.')[0] || 'عرض مارفيل');
+      var product = (window.location.pathname.split('/').pop().split('.')[0] || 'عرض ميامي');
 
       var lang = navigator.language || navigator.userLanguage; var isHebrew = (lang||'').includes('he');
       var message = isHebrew
@@ -165,7 +165,7 @@
     (function(){
       var lang = navigator.language || navigator.userLanguage;
       if((lang||'').includes('he')){
-        document.getElementById('formTitle').innerText = 'אני מעוניין להזמין את מבצע הבשמים של Marvel';
+        document.getElementById('formTitle').innerText = 'אני מעוניין להזמין את מבצע הבשמים של MIAMI';
         document.getElementById('name').placeholder = 'השם המלא';
         document.getElementById('phone').placeholder = 'מספר טלפון';
         document.getElementById('address').placeholder = 'כתובת';
