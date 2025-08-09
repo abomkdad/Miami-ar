@@ -38,7 +38,7 @@
       snaptr('track','ADD_CART',{
         price: price,
         currency: 'ILS',
-        item_ids: ['marvel_offer'],
+        item_ids: ['Miami_offer'],
         item_category: 'Perfume',
         number_items: 1
       });
@@ -48,7 +48,7 @@
         price: price,
         currency: 'ILS',
         item_category: 'Perfume',
-        item_ids: ['marvel_offer'],
+        item_ids: ['Miami_offer'],
         quantity: 1
       });
     }
@@ -115,7 +115,7 @@
   <div class="alert" id="stockAlert">⏳ تبقّى 5 عملاء فقط يمكنهم الحصول على عرض مارڤيل قبل انتهاء العرض!</div>
 
   <div class="form-container" id="orderForm">
-    <h2 id="formTitle">أرغب بطلب عرض عطور Marvel</h2>
+    <h2 id="formTitle">أرغب بطلب عرض عطور Miami</h2>
     <div class="form-group"><input type="text" id="name" placeholder="الاسم الكامل" /></div>
     <div class="form-group"><input type="tel" id="phone" placeholder="رقم الهاتف" /></div>
     <div class="form-group"><input type="text" id="address" placeholder="العنوان" /></div>
@@ -146,7 +146,7 @@
 
       var lang = navigator.language || navigator.userLanguage; var isHebrew = (lang||'').includes('he');
       var message = isHebrew
-        ? `שלום, אני מעוניין לבצע הזמנה עבור מבצע הבשמים Marvel:\n👤 שם: ${name}\n📞 טלפון: ${phone}\n🏠 כתובת: ${address}\n📝 הערה: ${note || 'ללא'}`
+        ? `שלום, אני מעוניין לבצע הזמנה עבור מבצע הבשמים Miami:\n👤 שם: ${name}\n📞 טלפון: ${phone}\n🏠 כתובת: ${address}\n📝 הערה: ${note || 'ללא'}`
         : `مرحباً، أود طلب عرض ${product}:\n👤 الاسم: ${name}\n📞 الهاتف: ${phone}\n🏠 العنوان: ${address}\n📝 ملاحظة: ${note || 'لا يوجد'}`;
 
       var encodedMessage = encodeURIComponent(message);
