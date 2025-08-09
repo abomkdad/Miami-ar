@@ -93,19 +93,14 @@
     .submit-button{ background:var(--green); border:none; padding:12px; color:#fff; width:100%; font-size:16px; border-radius:5px; cursor:pointer }
     video{ width:100%; max-height:80vh; display:block; margin:20px auto }
 
-    /* Bottom Fixed Action Bar */
+    /* Bottom Fixed Action Bar (no icons) */
     .bottom-action-bar{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#0f0f0f;border-top:1px solid rgba(255,255,255,.1);padding:10px calc(12px + env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));display:flex;gap:10px;align-items:center;justify-content:space-between;box-shadow:0 -8px 20px rgba(0,0,0,.35)}
     .bottom-action-bar .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:16px;text-decoration:none}
     .btn-order{background:var(--green);color:#fff}
     .btn-call{background:#1e1e1e;color:#fff;border:1px solid rgba(255,255,255,.15)}
     .btn-wa{background:#25D366;color:#0b3d1f}
-    .btn svg{width:22px;height:22px}
     @media (min-width:768px){.bottom-action-bar{width:640px;margin:0 auto;left:0;right:0}}
     .has-bottom-bar{padding-bottom:80px}
-
-    /* Floating Order Button */
-    .floating-order-btn{position:fixed;bottom:80px;right:20px;background:var(--green);color:#fff;border-radius:50px;padding:12px 20px;font-size:16px;font-weight:700;box-shadow:0 4px 10px rgba(0,0,0,.3);cursor:pointer;z-index:10000;display:flex;align-items:center;gap:8px}
-    .floating-order-btn svg{width:20px;height:20px}
   </style>
 </head>
 <body>
@@ -132,22 +127,11 @@
     <source src="https://madperfume.ps/upload/07-2025/page/Copy%20of%2028.mp4" type="video/mp4" />
   </video>
 
-  <!-- Floating Order Button -->
-  <div class="floating-order-btn" id="floatingOrderBtn" onclick="scrollToOrder()">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h12v2H3v-2zm0 4h18v2H3v-2zm0 4h12v2H3v-2z"/></svg>
-    <span id="orderBtnText">اطلب الآن</span>
-  </div>
-
-  <!-- Bottom Fixed Action Bar -->
+  <!-- Bottom Fixed Action Bar (text only, no SVG icons) -->
   <div class="bottom-action-bar" dir="rtl" id="bottomBar">
-    <a href="tel:+972506164130" class="btn btn-call" aria-label="اتصال">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
-      اتصال
-    </a>
-    <button class="btn btn-order" type="button" onclick="scrollToOrder()" aria-label="اطلب الآن">اطلب الآن</button>
-    <a href="https://wa.me/972506164130" target="_blank" rel="noopener" class="btn btn-wa" aria-label="واتساب">
-      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.383 3 4 8.383 4 15c0 2.121.553 4.111 1.52 5.846L4 29l8.34-1.48A12.91 12.91 0 0016 27c6.617 0 12-5.383 12-12S22.617 3 16 3zm0 22.667c-1.82 0-3.51-.49-4.973-1.342l-.356-.208-4.297.763.78-4.205-.219-.364A9.995 9.995 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.164-7.373c-.281-.141-1.668-.824-1.927-.918-.26-.095-.449-.141-.639.141-.188.281-.733.917-.898 1.107-.166.188-.332.211-.613.07-.281-.142-1.187-.437-2.26-1.394-.835-.744-1.398-1.663-1.563-1.944-.166-.281-.018-.433.124-.574.127-.126.281-.331.421-.497.141-.166.188-.282.282-.47.095-.188.047-.352-.023-.493-.07-.141-.639-1.541-.875-2.11-.231-.556-.468-.48-.639-.489l-.545-.01c-.188 0-.493.07-.75.352s-.984.962-.984 2.345 1.008 2.722 1.148 2.91c.141.188 1.984 3.03 4.807 4.244.672.29 1.197.464 1.607.595.674.214 1.288.184 1.774.112.541-.08 1.668-.682 1.904-1.34.236-.658.236-1.22.165-1.34-.07-.118-.259-.188-.54-.33z"/></svg>
-    </a>
+    <a href="tel:+972506164130" class="btn btn-call" aria-label="اتصال" id="btnCallBottom">اتصال</a>
+    <button class="btn btn-order" type="button" onclick="scrollToOrder()" aria-label="اطلب الآن" id="btnOrderBottom">اطلب الآن</button>
+    <a href="https://wa.me/972506164130" target="_blank" rel="noopener" class="btn btn-wa" aria-label="واتساب" id="btnWaBottom">واتساب</a>
   </div>
 
   <script>
@@ -177,7 +161,7 @@
       window.open(url,'_blank');
     }
 
-    // Locale adjustments (Hebrew)
+    // Locale adjustments (Hebrew) + bottom bar translations
     (function(){
       var lang = navigator.language || navigator.userLanguage;
       if((lang||'').includes('he')){
@@ -189,9 +173,15 @@
         document.getElementById('submitBtn').innerText = 'אישור ההזמנה';
         document.getElementById('stockAlert').innerText = '⏳ נותרו רק 5 לקוחות שיכולים להזמין את ההצעה לפני סיומה!';
         document.querySelector('.progress-bar').innerText = 'נשאר שלב אחד להשלמת ההזמנה';
-        document.getElementById('orderBtnText').innerText = 'הזמן עכשיו';
+        document.getElementById('btnOrderBottom').innerText = 'הזמן עכשיו';
+        document.getElementById('btnOrderBottom').setAttribute('aria-label','הזמן עכשיו');
+        document.getElementById('btnCallBottom').innerText = 'שיחה';
+        document.getElementById('btnWaBottom').innerText = 'וואטסאפ';
       } else {
-        document.getElementById('orderBtnText').innerText = 'اطلب الآن';
+        document.getElementById('btnOrderBottom').innerText = 'اطلب الآن';
+        document.getElementById('btnOrderBottom').setAttribute('aria-label','اطلب الآن');
+        document.getElementById('btnCallBottom').innerText = 'اتصال';
+        document.getElementById('btnWaBottom').innerText = 'واتساب';
       }
       try{ document.body.classList.add('has-bottom-bar'); }catch(e){}
     })();
